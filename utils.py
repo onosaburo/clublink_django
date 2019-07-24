@@ -39,14 +39,7 @@ def move_individual_page(p, site, parent=None):
     p.parent = parent
     p.site = site
 
-    # if children:
-    #     import pdb; pdb.set_trace()
-
     p.save()
-
-    # if children:
-    #     import pdb; pdb.set_trace()
-
 
     imgs = CorpImage.objects.filter(pk__in=images)
     for i in imgs:
