@@ -20,5 +20,5 @@ if settings.DEBUG:
 import shared_session
 
 urlpatterns += [
-    url(r'^shared-session/', shared_session.urls),  # feel free to change the base url
+    url(r'^shared-session/', shared_session.urls), 
 ]
