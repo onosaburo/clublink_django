@@ -520,6 +520,7 @@ class ClubEventRSVP(models.Model):
 
         All this because they didn't write this properly with ModelForm's in the first place.
         This can't be undone very easily now because of how ingrained the data is with all parts of the system.
+        
         '''
         attrs = {}
 
@@ -537,8 +538,10 @@ class ClubEventRSVP(models.Model):
 
     def get_initial_form_data(self, editmode=False, behalf=None):
         '''
+        
         This helps populate the ClubEventRSVP form, which is not a ModelForm,
         so that we can hydrate it and allow for some edits.
+        
         '''
 
         # Populate the host information first
