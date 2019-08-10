@@ -36,6 +36,7 @@ class CorpSnippetAdmin(ImportExportModelAdmin, admin.ModelAdmin):
     list_display = (
         'page_name', 'slug', 'locale', 'content',
     )
+    
 admin.site.register(CorpSnippet, CorpSnippetAdmin)    
 
 class ClubSnippetAdmin(ImportExportModelAdmin, admin.ModelAdmin):
