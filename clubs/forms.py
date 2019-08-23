@@ -66,20 +66,6 @@ class ProfileForm(forms.Form):
     employer = forms.CharField(max_length=80, required=False)
     position = forms.CharField(max_length=30, required=False)
     show_in_roster = forms.BooleanField(required=False, widget=forms.CheckboxInput())
-    # show_phone = forms.ChoiceField(
-    #     required=False,
-    #     choices=(
-
-    #     )
-    #     )
-    # show_email = forms.ChoiceField(
-    #     required=False,
-    #     choices=(
-
-    #     )
-    #     )
-
-
     def __init__(self, user, *args, **kwargs):
         super().__init__(*args, **kwargs)
         kw_initial = kwargs.get('initial', {})
