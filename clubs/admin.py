@@ -21,16 +21,16 @@ class ClubAdmin(admin.ModelAdmin):
         'site',
     )
 
-    filter_horizontal = ('admins',)
-    list_filter = ('site', 'region', 'tier',)
+    filter_horizontal = ('admins')
+    list_filter = ('site', 'region', 'tier')
 
 
 admin.site.register(Club, ClubAdmin)
 
 
 class DepartmentAdmin(admin.ModelAdmin):
-    list_display = ('name', 'hidden', 'number',)
-    list_editable = ('hidden',)
+    list_display = ('name', 'hidden', 'number')
+    list_editable = ('hidden')
 
 
 admin.site.register(Department, DepartmentAdmin)
