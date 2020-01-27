@@ -9,6 +9,7 @@ from django.utils.safestring import mark_safe
 # ('12', '34', ':56', '56', 'P.M.', 'P', '.', 'M', '.')
 # ('12', '34', ':56', '56', 'P.M.')
 # Note that the colon ":" before seconds is optional, but only if seconds are omitted
+
 RE_TIME = re.compile(r'(\d\d?):(\d\d)(:(\d\d))? *([aApP]\.?[mM]\.?)?$')
 
 # The following are just more readable ways to access re.matched groups:
@@ -27,6 +28,7 @@ class SelectTimeWidget(Widget):
 
     Also allows user-defined increments for minutes/seconds
     """
+    
     none_value = ('', '---')
     hour_field = '%s_hour'
     minute_field = '%s_minute'
@@ -66,6 +68,7 @@ class SelectTimeWidget(Widget):
             self.seconds = range(0, 60, second_step)
         else:
             self.seconds = range(0, 60)
+      return
 
     def render(self, name, value, attrs=None):
         hour_val = ''
